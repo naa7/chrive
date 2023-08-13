@@ -92,6 +92,8 @@ Chrive boasts the following core features:
 - **trip_time**
 - **passengers**
 - **Phone**
+  
+![ER Diagram](https://github.com/naa7/chrive/blob/main/ER_diagram.png)
 
 ## Functionality & Features
 
