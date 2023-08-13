@@ -6,10 +6,18 @@ error_reporting(E_ALL);
 session_start();
 
 
-$servername = "localhost";
-$username = "root";
-$password = "12345";
-$dbname = "chrive";
+$envFilePath = __DIR__ . '/../.env';
+
+if (file_exists($envFilePath)) {
+  $envVariables = parse_ini_file($envFilePath);
+  $servername = $envVariables['DB_HOST'];
+  $username = $envVariables['DB_USERNAME'];
+  $password = $envVariables['DB_PASSWORD'];
+  $dbname = $envVariables['DB_NAME'];
+} else {
+  die('.env file not found');
+}
+
 $message = "";
 $user_id = $_SESSION['user_id'];
 

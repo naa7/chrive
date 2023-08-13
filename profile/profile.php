@@ -6,10 +6,18 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-$servername = "localhost";
-$username = "root";
-$password = "12345";
-$dbname = "chrive";
+$envFilePath = __DIR__ . '/../.env';
+
+if (file_exists($envFilePath)) {
+    $envVariables = parse_ini_file($envFilePath);
+    $servername = $envVariables['DB_HOST'];
+    $username = $envVariables['DB_USERNAME'];
+    $password = $envVariables['DB_PASSWORD'];
+    $dbname = $envVariables['DB_NAME'];
+} else {
+    die('.env file not found');
+}
+
 $uname = $_SESSION['username'];
 $user_id = $_SESSION['user_id'];
 $conn = new mysqli($servername, $username, $password, $dbname);
