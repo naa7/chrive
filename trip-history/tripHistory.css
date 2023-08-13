@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap");
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: rgb(15, 68, 68);
+}
+
+.navbar {
+  color: white;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: black;
+  height: 4rem;
+}
+
+.nav-links {
+  list-style: none;
+  font-size: 1.25rem;
+  font-family: "Oswald", "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 1rem;
+}
+
+/* .nav-links li {
+  margin-right: 2rem;
+} */
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.right-link {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:hover,
+.right-link a:hover {
+  color: #ff9900;
+}
+
+.background-container::before {
+  content: "";
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  z-index: -10;
+  background: linear-gradient(
+    45deg,
+    rgb(157, 201, 201),
+    transparent,
+    rgb(12, 56, 56)
+  );
+
+  animation: backgroundAnimation3 4s linear infinite;
+}
+
+@keyframes backgroundAnimation3 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-top: 10%;
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+.table-container {
+  width: 97%;
+  margin: 2% auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border: none;
+}
+
+thead th,
+tbody td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+thead th {
+  background-color: #009879;
+  color: #ffffff;
+  padding: 1.25rem;
+}
+
+.top-right {
+  border-top-right-radius: 0.5rem;
+}
+
+.top-left {
+  border-top-left-radius: 0.5rem;
+}
+
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+td {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+th,
+td {
+  border: none;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+tbody tr:last-child {
+  border-bottom: 0.2rem solid #009879;
+}
+
+tbody tr:hover {
+  font-style: italic;
+  color: #009879;
+}
