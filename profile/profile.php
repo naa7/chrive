@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['save'])) {
         $update_password_stmt->bind_param("si", $new_password, $user_id);
         $update_password_stmt->execute();
         $update_password_stmt->close();
-    } else {
+    } elseif (!empty($_POST['new_password']) || !empty($_POST['confirm_password'])) {
         $message = "Passwords do not match";
     }
 }

@@ -196,7 +196,7 @@ body {
 .scroll-arrow {
   position: absolute;
   bottom: 6vh;
-  left: 45%;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: white;
@@ -227,7 +227,6 @@ body {
 .scroll-arrow:hover::before {
   content: "Scroll";
   font-family: "Franklin Gothic Medium", sans-serif;
-
   position: absolute;
   top: -30px;
   left: 50%;

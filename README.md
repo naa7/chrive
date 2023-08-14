@@ -66,7 +66,7 @@ Chrive boasts the following core features:
 3. The backend processes incoming requests, facilitating communication with the MySQL database and generating relevant responses.
 4. Frontend updates its interface based on the response from the backend, ensuring a dynamic and responsive user experience.
 
-![Wireframes](https://github.com/naa7/chrive/blob/main/wireframes.png)
+![Wireframes](https://github.com/naa7/chrive/blob/main/website-design/wireframes.png)
 
 ## User Interface (UI) Design
 
@@ -95,7 +95,7 @@ Chrive boasts the following core features:
 - **passengers**
 - **Phone**
   
-![ER Diagram](https://github.com/naa7/chrive/blob/main/ER_diagram.png)
+![ER Diagram](https://github.com/naa7/chrive/blob/main/website-design/ER_diagram.png)
 
 ## Functionality & Features
 

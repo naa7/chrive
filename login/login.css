@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+
 *,
 *:before,
 *:after {
@@ -23,64 +25,57 @@
   z-index: -10;
 }
 
-.login-container:hover,
-.login-container:active {
-  .login-top,
-  .login-bottom {
-    &:before,
-    &:after {
-      margin-left: 300px !important;
-      transform-origin: -300px 50% !important;
-      transition-delay: 0s !important;
-    }
-  }
-
-  .login-center {
-    opacity: 1 !important;
-    transition-delay: 0.2s !important;
-  }
+.login-container:hover .login-top::before,
+.login-container:hover .login-top::after,
+.login-container:hover .login-bottom::before,
+.login-container:hover .login-bottom::after {
+  margin-left: 300px !important;
+  transform-origin: -300px 50% !important;
+  transition-delay: 0s !important;
 }
 
-.login-top,
-.login-bottom {
-  &:before,
-  &:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100vmax;
-    height: 125vmax;
-    max-width: 100%;
-    top: 50%;
-    left: 50%;
-    margin-top: -63vmax;
-    transform-origin: 0 50%;
-    transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
-    opacity: 0.65;
-    transition-delay: 0.2s;
-  }
+.login-container:hover .login-center {
+  opacity: 1 !important;
+  transition-delay: 0.2s !important;
 }
 
-.login-top {
-  &:before {
-    transform: rotate(45deg);
-    background: #17c02e;
-  }
-  &:after {
-    transform: rotate(135deg);
-    background: #224091;
-  }
+.login-top::before,
+.login-top::after,
+.login-bottom::before,
+.login-bottom::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100vmax;
+  height: 125vmax;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  margin-top: -63vmax;
+  transform-origin: 0 50%;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0, 1);
+  opacity: 0.65;
+  transition-delay: 0.2s;
 }
 
-.login-bottom {
-  &:before {
-    transform: rotate(-45deg);
-    background: #fc9701;
-  }
-  &:after {
-    transform: rotate(-135deg);
-    background: #7700ff;
-  }
+.login-top::before {
+  transform: rotate(45deg);
+  background: #17c02e;
+}
+
+.login-top::after {
+  transform: rotate(135deg);
+  background: #224091;
+}
+
+.login-bottom::before {
+  transform: rotate(-45deg);
+  background: #fc9701;
+}
+
+.login-bottom::after {
+  transform: rotate(-135deg);
+  background: #7700ff;
 }
 
 .login-header {
@@ -157,6 +152,22 @@
   display: flex;
   align-items: center;
   text-align: center;
+}
+
+.login-message {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  margin-top: 33px;
+  text-align: center;
+  font-size: 60px;
+  color: #ffffff;
+  z-index: 1;
+  font-family: "Oswald", sans-serif;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .login-container:hover .login-message {
