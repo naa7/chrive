@@ -75,6 +75,8 @@ Chrive boasts the following core features:
 - Typography choices, including the "Oswald" font for headings and "Raleway" for content, ensure optimal readability and aesthetic appeal.
 - Interactive elements, such as button hover effects, smooth transitions, subtle animations, and thorough form validation, contribute to an engaging user journey.
 
+- The implementation of a parallax scrolling effect on the homepage adds an additional layer of depth and intrigue. This captivating feature enhances the visual presentation of the company's description and captures users' attention.
+
 ## Database Design
 
 ### Users Table
